@@ -61,3 +61,20 @@ def solve_khist(A, B, k):
         current_n = next_n
     X[0] = next_n
     return X, dp
+
+def heuristic_khist(partitions):
+    '''
+    partitions are a list contains the tuples as this:
+    (data density, parition fraction, partition set)
+    
+    we use the following variables for indicating 
+    the elements in each tuple:
+    (weight, volume, components)
+    '''
+    scored_partition = [
+        ( weight, volume, components)
+        for weight, volume, components
+        in partitions
+    ]
+    
+    
